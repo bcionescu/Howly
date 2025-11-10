@@ -146,7 +146,6 @@ def parse_embeds(file_contents)
     %Q(<div class="video-container"><iframe src="https://www.youtube.com/embed/#{video_id}" frameborder="0" allowfullscreen></iframe></div>\n\n)
   end
 
-
   return file_contents
 end
 
