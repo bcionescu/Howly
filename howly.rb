@@ -36,7 +36,7 @@ def parse_newlines(file_contents)
       line.chomp!
     end
 
-    if line[0] != "#" && line[0] != "<" && line != "\n"
+    if line[0] != "<" && line != "\n"
       line = %Q(<p>#{line}</p>\n)
     end
     
