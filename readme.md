@@ -7,8 +7,8 @@ A lightweight Markdown to HTML converter written in Ruby. Althrough Howly is cur
 - [x] Replace bold text: `**bold**` or `__bold__`.
 - [x] Replace italic text: `*italic*` or `_italic_`.
 - [x] Replace hyperlinks.
+- [x] Replace both bold and italic at the same time: `***boldanditalic***` `___boldanditalic___`.
 - [ ] Embed YouTube links if found by themselves on a line.
-- [ ] Replace both bold and italic at the same time: `***boldanditalic***` `___boldanditalic___`.
 - [ ] Automatically add paragraphs.
 - [ ] Replace headings.
 - [ ] Replace Markdown ordered lists with HTML. Check for usage of 1), 2), etc. as well.
