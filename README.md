@@ -11,7 +11,7 @@ A lightweight Markdown to HTML converter written in Ruby. Howly is currently a w
 - [x] Embed YouTube links if found by themselves on a line.
 - [x] Ensure that the link turns into an embed only when it is not preceded or followed by anything else.
 - [x] Handle both youtube.com and youtu.be type links when embedding.
-- [x] Replace headings.
+- [x] Replace headings from H1 to H6.
 - [x] Allow for image embedding.
 - [x] Automatically add paragraphs.
 - [x] Save the output to the same directory as the original .md file.
