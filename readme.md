@@ -12,5 +12,5 @@ A lightweight Markdown to HTML converter written in Ruby. Howly is currently a w
 - [x] Ensure that the link turns into an embed only when it is not preceded or followed by anything else.
 - [x] Handle both youtube.com and youtu.be type links when embedding.
 - [x] Replace headings.
-- [x] Allow for images
+- [x] Allow for image embedding.
 - [ ] Automatically add paragraphs.
