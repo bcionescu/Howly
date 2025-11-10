@@ -27,7 +27,7 @@ ruby howly.rb "/Users/admin/Documents/blog post.md"
 ```
 ## Documentation
 
-For the nerds out there who are curious how this work, let's go through each function one by one, discuss what it does, and how it does it.
+For the nerds out there who are curious how this program works, let's go through each function one by one, discuss what it does, and how it does it.
 
 ### Getting the path
 
