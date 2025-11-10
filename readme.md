@@ -1,6 +1,6 @@
 # Howly
 
-A lightweight Markdown to HTML converter written in Ruby. Howly is currently a work in progress, although it does work, and it's mostly designed to help me convert my own [blow posts](https://bcionescu.com).
+A lightweight Markdown to HTML converter written in Ruby. Howly is currently a work in progress, although it does work, and it's mostly designed to help me convert my own [blog posts](https://bcionescu.com).
 
 ## To-Do:
 
