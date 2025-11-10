@@ -83,8 +83,18 @@ def parse_italic(file_contents)
   return file_contents
 end
 
+def parse_images(file_contents)
+  file_contents = file_contents.gsub(/^\[(.+?)\]\(([^)]+)\)$/) do
+    image_name = $1
+    image_path = $2
+    %Q(<img src="#{image_path}" alt="#{image_name}">)
+  end
+
+  return file_contents
+end
+
 def parse_hyperlinks(file_contents)
-    file_contents = file_contents.gsub(/\[(.+?)\]\(([^)]+)\)/) do
+  file_contents = file_contents.gsub(/\[(.+?)\]\(([^)]+)\)/) do
     text = $1
     url = $2
     %Q(<a href="#{url}" class="body-link" target="_blank" rel="noopener noreferrer">#{text}</a>)
@@ -122,6 +132,8 @@ begin
   file_contents = parse_bold(file_contents)
 
   file_contents = parse_italic(file_contents)
+
+  file_contents = parse_images(file_contents)
 
   file_contents = parse_hyperlinks(file_contents)
 

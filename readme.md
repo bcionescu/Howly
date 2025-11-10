@@ -12,7 +12,7 @@ A lightweight Markdown to HTML converter written in Ruby. Howly is currently a w
 - [x] Ensure that the link turns into an embed only when it is not preceded or followed by anything else.
 - [x] Handle both youtube.com and youtu.be type links.
 - [x] Replace headings.
+- [x] Allow for images
 - [ ] Automatically add paragraphs.
 - [ ] Replace Markdown ordered lists with HTML. Check for usage of 1), 2), etc. as well.
 - [ ] Take unordered lists into account as well. The user might use `-`, `*`, `+` or `-` to indicate an element in such a list. Bear in mind that indented items are also a possibility. Additionally, unordered lists can start with numbers.
-- [ ] Allow for images
