@@ -48,27 +48,27 @@ end
 
 def parse_headings(file_contents)
 
-  file_contents = file_contents.gsub(/###### (.+?)$/) do
+  file_contents = file_contents.gsub(/^###### (.+?)$/) do
     "<h6>#{$1}</h6>"
   end
 
-  file_contents = file_contents.gsub(/##### (.+?)$/) do
+  file_contents = file_contents.gsub(/^##### (.+?)$/) do
     "<h5>#{$1}</h5>"
   end
 
-  file_contents = file_contents.gsub(/#### (.+?)$/) do
+  file_contents = file_contents.gsub(/^#### (.+?)$/) do
     "<h4>#{$1}</h4>"
   end
 
-  file_contents = file_contents.gsub(/### (.+?)$/) do
+  file_contents = file_contents.gsub(/^### (.+?)$/) do
     "<h3>#{$1}</h3>"
   end
 
-  file_contents = file_contents.gsub(/## (.+?)$/) do
+  file_contents = file_contents.gsub(/^## (.+?)$/) do
     "<h2>#{$1}</h2>"
   end
 
-  file_contents = file_contents.gsub(/# (.+?)$/) do
+  file_contents = file_contents.gsub(/^# (.+?)$/) do
     "<h1>#{$1}</h1>"
   end
 
