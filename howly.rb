@@ -63,6 +63,23 @@ def parse_hyperlinks(file_contents)
   return file_contents
 end
 
+def parse_embeds(file_contents)
+  file_contents = file_contents.gsub(/^https:\/\/(www\.)?youtube\.com\/watch\?v=([A-Za-z0-9_-]+)\s*$/) do
+    video_id = $2
+
+    %Q(<div class="video-container"><iframe src="https://www.youtube.com/embed/#{video_id}" frameborder="0" allowfullscreen></iframe></div>)
+  end
+
+  file_contents = file_contents.gsub(/^https:\/\/(www\.)?youtu\.be\/([A-Za-z0-9_-]+)\s*$/) do
+    video_id = $2
+
+    %Q(<div class="video-container"><iframe src="https://www.youtube.com/embed/#{video_id}" frameborder="0" allowfullscreen></iframe></div>)
+  end
+
+
+  return file_contents
+end
+
 begin
   file_path = read_file
 
@@ -75,6 +92,8 @@ begin
   file_contents = parse_italic(file_contents)
 
   file_contents = parse_hyperlinks(file_contents)
+
+  file_contents = parse_embeds(file_contents)
 
   puts file_contents
 
