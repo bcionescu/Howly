@@ -18,7 +18,7 @@ def write_file(file_path, file_contents)
     file.puts file_contents
   end
 
-  puts "The output has been saveed to #{html_path}."
+  puts "The output has been saved to #{html_path}."
 end
 
 def parse_contents(file_path)
