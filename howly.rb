@@ -16,6 +16,36 @@ def parse_contents(file_path)
   return file_contents
 end
 
+def parse_headings(file_contents)
+
+  file_contents = file_contents.gsub(/###### (.+?)$/) do
+    "<h6>#{$1}</h6>"
+  end
+
+  file_contents = file_contents.gsub(/##### (.+?)$/) do
+    "<h5>#{$1}</h5>"
+  end
+
+  file_contents = file_contents.gsub(/#### (.+?)$/) do
+    "<h4>#{$1}</h4>"
+  end
+
+  file_contents = file_contents.gsub(/### (.+?)$/) do
+    "<h3>#{$1}</h3>"
+  end
+
+  file_contents = file_contents.gsub(/## (.+?)$/) do
+    "<h2>#{$1}</h2>"
+  end
+
+  file_contents = file_contents.gsub(/# (.+?)$/) do
+    "<h1>#{$1}</h1>"
+  end
+
+  return file_contents
+end
+
+
 def parse_bold_and_italic(file_contents)
 
   file_contents = file_contents.gsub(/\*\*\*(.+?)\*\*\*/) do
@@ -84,6 +114,8 @@ begin
   file_path = read_file
 
   file_contents = parse_contents(file_path)
+
+  file_contents = parse_headings(file_contents)
 
   file_contents = parse_bold_and_italic(file_contents)
 
