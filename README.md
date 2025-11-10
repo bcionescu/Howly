@@ -15,6 +15,7 @@ A lightweight Markdown to HTML converter written in Ruby. Howly is currently a w
 - [x] Allow for image embedding.
 - [x] Automatically add paragraphs.
 - [x] Save the output to the same directory as the original .md file.
+- [ ] Incorporate Howly within [Blogby](https://www.github.com/bcionescu/blogby)
 
 ## Usage
 
