@@ -1,4 +1,4 @@
-def read_file
+def get_path
 
   file_path = ARGV[0]
 
@@ -151,7 +151,7 @@ def parse_embeds(file_contents)
 end
 
 begin
-  file_path = read_file
+  file_path = get_path
 
   file_contents = parse_contents(file_path)
 
