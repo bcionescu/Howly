@@ -16,8 +16,25 @@ def parse_contents(file_path)
   return file_contents
 end
 
+def parse_bold_and_italic(file_contents)
+
+  file_contents = file_contents.gsub(/\*\*\*(.+?)\*\*\*/) do
+    "<b><i>#{$1}</i></b>"
+  end
+
+  file_contents = file_contents.gsub(/\_\_\_(.+?)\_\_\_/) do
+    "<b><i>#{$1}</i></b>"
+  end
+
+  return file_contents
+end
+
 def parse_bold(file_contents)
   file_contents = file_contents.gsub(/\*\*(.+?)\*\*/) do
+    "<b>#{$1}</b>"
+  end
+
+  file_contents = file_contents.gsub(/\_\_(.+?)\_\_/) do
     "<b>#{$1}</b>"
   end
 
@@ -26,6 +43,10 @@ end
 
 def parse_italic(file_contents)
   file_contents = file_contents.gsub(/\*(.+?)\*/) do
+    "<i>#{$1}</i>"
+  end
+
+  file_contents = file_contents.gsub(/\_(.+?)\_/) do
     "<i>#{$1}</i>"
   end
 
@@ -46,6 +67,8 @@ begin
   file_path = read_file
 
   file_contents = parse_contents(file_path)
+
+  file_contents = parse_bold_and_italic(file_contents)
 
   file_contents = parse_bold(file_contents)
 
