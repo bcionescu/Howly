@@ -20,4 +20,8 @@ A lightweight Markdown to HTML converter written in Ruby. Howly is currently a w
 
 Howly is a terminal utility. The only requirement is having Ruby installed. In order to use it, clone this repo, and then run `ruby howly.rb <path>` where `<path>` is the path to your `.md` file. Once Howly has finished parsing your file, the `.html` output will be saved to the same directory as the `.md` file.
 
-If you get an error, ensure that the path to your `.md` file contains no spaces, or wrap the path in `""` (double quotes).
+If you get an error, ensure that the path to your `.md` file contains no spaces, or wrap the path in `""` (double quotes). Here is an example:
+
+```bash
+ruby howly.rb "/Users/admin/Documents/blog post.md"
+```
